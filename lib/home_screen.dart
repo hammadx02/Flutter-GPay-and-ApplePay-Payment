@@ -63,6 +63,12 @@ class _HomeScreenState extends State<HomeScreen> {
         status: PaymentItemStatus.final_price,
       ),
     ],
+    type: GooglePayButtonType.buy,
+    margin: const EdgeInsets.only(top: 15),
+    onPaymentResult: (result) => debugPrint('Payment result $result'),
+    loadingIndicator: const Center(
+      child: CircularProgressIndicator(),
+    ),
   );
   @override
   Widget build(BuildContext context) {
