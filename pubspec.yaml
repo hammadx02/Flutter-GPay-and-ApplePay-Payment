@@ -1,31 +1,25 @@
 name: flutter_gpay_and_applepay_integration
 description: "A new Flutter project."
 
-publish_to: 'none' 
-
+publish_to: 'none'
 
 version: 1.0.0+1
 
 environment:
   sdk: '>=3.4.3 <4.0.0'
 
-
 dependencies:
+  cupertino_icons: ^1.0.6
   flutter:
     sdk: flutter
-
-
- 
-  cupertino_icons: ^1.0.6
+  pay: ^2.0.0
 
 dev_dependencies:
+
+  flutter_lints: ^3.0.0
   flutter_test:
     sdk: flutter
 
-
-  flutter_lints: ^3.0.0
-
 flutter:
-
 
   uses-material-design: true
