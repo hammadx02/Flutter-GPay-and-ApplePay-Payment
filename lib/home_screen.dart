@@ -1,5 +1,4 @@
 import 'dart:io';
-
 import 'package:flutter/material.dart';
 import 'package:flutter_gpay_and_applepay_integration/payment_config.dart';
 import 'package:pay/pay.dart';
@@ -70,8 +69,16 @@ class _HomeScreenState extends State<HomeScreen> {
       child: CircularProgressIndicator(),
     ),
   );
+
   @override
   Widget build(BuildContext context) {
-    return const Scaffold();
+    return Scaffold(
+      body: Padding(
+        padding: const EdgeInsets.all(10),
+        child: Center(
+          child: Platform.isIOS ? applePayButton : googlePayButton,
+        ),
+      ),
+    );
   }
 }
