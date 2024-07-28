@@ -22,7 +22,26 @@ class _HomeScreenState extends State<HomeScreen> {
         label: 'Iphone 13 Pro Max',
         status: PaymentItemStatus.final_price,
       ),
+      PaymentItem(
+        amount: '350',
+        label: 'MacBook Pro',
+        status: PaymentItemStatus.final_price,
+      ),
+      PaymentItem(
+        amount: '600',
+        label: 'Total',
+        status: PaymentItemStatus.final_price,
+      ),
     ],
+    style: ApplePayButtonStyle.black,
+    width: double.infinity,
+    height: 50,
+    type: ApplePayButtonType.buy,
+    margin: const EdgeInsets.only(top: 15),
+    onPaymentResult: (result) => debugPrint('Payment Result $result'),
+    loadingIndicator: const Center(
+      child: CircularProgressIndicator(),
+    ),
   );
   @override
   Widget build(BuildContext context) {
